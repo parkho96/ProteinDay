@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+<head>
+  <meta charset="UTF-8">
+  <title>블루아카이브_list</title>
+  <!-- CSS only -->
+  <link rel="stylesheet" href="boot.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!--드랍다운 버튼-->
+  <style>
+    .dropdown-menu {
+      display: none;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .container div {
+      border: 0.5px solid black;
+    }
+
+    .container-fluid>div {
+      border: 0.5px solid black;
+    }
+
+    .container-fluid>div {
+      border: 0.5px solid black;
+    }
+
+    .side_menu {
+      margin: 5px 0px 5px 0px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- 메인 부분 -->
+  <div class="container-fluid " style="margin-top: 40px;" layout:fragment="content">
+    <div class="row gx-0">
+      <div class="row">
+        <div class="col-md-4 text-center h3">
+          관리자 메인화면
+        </div>
+      </div>
+
+      <div class="col-10">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-4 text-center">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      유저 통계
+                    </div>
+                  </div>
+    
+                  <div class="row" style="height: 400px;">
+                    <div class="col-12 text-center">
+                        <pre>
+유저 통계
+- 전체 유저 수
+- 구매유저 수
+- 판매유저 수
+                        </pre>
+                      </div>
+                  </div>
+                </div>
+    
+                <div class="col-8 text-center">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      커뮤니티 관련 통계
+                    </div>
+                  </div>
+    
+                  <div class="row" style="height: 400px;">
+                    <div class="col-12 text-center">
+                        <pre>
+    커뮤니티 통계
+    - 카테고리 별 게시물 개수
+    - 댓글 개수
+    - 전체 조회수
+                        </pre>
+                      </div>
+                  </div>
+                </div>
+              </div>
+    
+    
+              <div class="row">
+                <div class="col-8 text-center">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      쇼핑몰 관련 통계
+                    </div>
+                  </div>
+    
+                  <div class="row" style="height: 400px;">
+                    <div class="col-12 text-center">
+                        <pre>쇼핑몰 통계
+- 카테고리 별 매출
+- 카테고리 별 상품수
+- 전체 상품수
+- 전체 매출
+                        </pre>
+                      </div>
+                  </div>
+                </div>
+    
+                <div class="col-4 text-center">
+                  <div class="row">
+                    <div class="col-12 text-center">
+                      신고 미처리 건수
+                    </div>
+                  </div>
+    
+                  <div class="row" style="height: 400px;">
+                    <div class="col-12 text-center">
+                        <pre>신고 미처리 통계
+- 게시물 신고 수
+- 댓글 신고 수
+- 상품 신고 수
+- 리뷰 신고 수
+                        </pre>
+                      </div>
+                  </div>
+                </div>
+    
+              </div>
+
+
+
+
+
+        </div>
+      </div>
+
+
+
+
+      <!-- 사이드메뉴 부분 -->
+      <div class="col-2">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-12 text-center side_menu">
+                <a th:href="@{/admin/main}">관리자 메인</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 text-center side_menu">
+                <a th:href="@{/admin/userMgt}">유저관리</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 text-center side_menu">
+                <a th:href="@{/admin/commMgt}">커뮤니티관리</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 text-center side_menu">
+                <a th:href="@{/admin/shopMgt}">쇼핑몰관리</a>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12 text-center side_menu">
+                <a th:href="@{/admin/reportMgt}">신고관리</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

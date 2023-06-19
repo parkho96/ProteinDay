@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<form role="form" method="post" action="/boardWrite/new">
+  <p>
+    게시글 작성
+  </p>
+  <div class="col-10">
+    <select name="category" id="category" >
+      <option th:each="category : ${categoryList}" th:value="${category.categoryId}" th:text="${category.categoryName}"></option>
+    </select>
+  </div>
+  <input type="text" name="createdBy" th:value="${member.name}" readonly>
+  <input type="text" name="member_idx" th:value="${member.memberIdx}" readonly>
+  제목:
+  <input type="text" name = "boardTitle" placeholder="제목 입력"/>
+  내욜:
+  <input type="text" name = "boardContent" placeholder="내용 입력"/>
+  조회수:
+
+  <button type="submit">저장</button>
+</form>
+</body>
+</html>

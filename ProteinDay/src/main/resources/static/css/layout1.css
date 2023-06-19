@@ -1,0 +1,13 @@
+html{
+    position:relative;
+    min-height:100%;
+    margin:0;
+}
+
+.content{
+    min-height:75vh;
+    margin-bottom:100px;
+    margin-top:50px;
+    margin-left:200px;
+    margin-right:200px;
+}
